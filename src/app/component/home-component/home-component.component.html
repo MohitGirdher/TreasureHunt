@@ -1,0 +1,13 @@
+<input type="text" id= "userName" placeholder="Enter user name" required/>
+<button class="btn" (click)="onSubmit()">Play Game</button>
+<div class="container" *ngIf="isStart">
+  <div class="table">
+    <table id="table">
+      <thead></thead>
+      <tbody>
+        <tr *ngFor="let row of treasureArray;let i=index;">
+        <td *ngFor="let data of row;let j=index;" (click)="getElementDetails($event)">{{row[j]}}</td>
+      </tr>
+     </tbody>
+    </table>
+  </div></div>
